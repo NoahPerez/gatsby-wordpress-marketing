@@ -6,9 +6,11 @@ module.exports = {
   plugins: [{
     resolve: 'gatsby-source-wordpress',
     options: {
-      "url": "http://gatsbytailwindsitewordpress.local/graphql"
+      "url": "https://s5042471.saturnwp.link/graphql"
     }
-  }, {
+  },
+  "gatsby-plugin-postcss",
+  {
     resolve: 'gatsby-plugin-google-analytics',
     options: {
       "trackingId": "G-BQ901VMMFQ"
