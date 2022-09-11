@@ -1,3 +1,8 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
+
 module.exports = {
   siteMetadata: {
     title: `gatsby-wordpress-marking`,
@@ -6,7 +11,12 @@ module.exports = {
   plugins: [{
     resolve: 'gatsby-source-wordpress',
     options: {
-      "url": "https://s5042471.saturnwp.link/graphql"
+      "url": "https://s5042471.saturnwp.link/graphql",auth: {
+        htaccess: {
+          username: process.env.HTTPBASICAUTH_USERNAME,
+          password: process.env.HTTPBASICAUTH_PASSWORD
+        }
+      }
     }
   },
   "gatsby-plugin-postcss",
