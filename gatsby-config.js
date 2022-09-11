@@ -5,8 +5,12 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `gatsby-wordpress-marking`,
-    siteUrl: `https://www.yourdomain.tld`
+    defaultTitle: `Gatsby and WordPress Demo Starter`,
+    defaultDescription: `Demo starter for combining Gatsby and WordPress. Created for the LinkedIn Learning course "Building a Headless WordPress Site with Gatsby" and based on Gatsby Default Starter by @gatsbyjs`,
+    author: `@mor10`,
+    siteUrl: `https://www.yourdomain.tld`,
+    logo: `/logo.png`,
+    twitter: `@mor10`,
   },
   plugins: [{
     resolve: 'gatsby-source-wordpress',
